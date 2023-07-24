@@ -19,10 +19,11 @@ class Curve_chart : public QWidget
     Q_OBJECT
 public:
     explicit Curve_chart(QWidget *parent = nullptr);
-    void dataReceived(const QList<int> &value);
+    void dataReceived(const QList<float> &value);
     void setCharTitle(QString s);
     void setLineName(QString s, int i);
     void clearAlldate();
+    void setY(float maxY, float minY);
 
 protected:
     QChart* createChart();
@@ -30,9 +31,10 @@ protected:
 
 private:
     int seriesSize = 1;//定义曲线个数最大为3
-    int maxSize;
-    int maxX;
-    int maxY;
+    int maxSize = 10;
+    float maxX = 10;
+    float maxY = 25;
+    float minY = -25;
     double dataNum;
     QHBoxLayout *layout;
     QList<QSplineSeries*> splineSeries;

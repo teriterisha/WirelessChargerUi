@@ -13,6 +13,7 @@ Curve_chart::Curve_chart(QWidget *parent)
     layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(chartView);
     setLayout(layout);
+
 }
 void Curve_chart::createSeries() {
     for(int i = 0; i < seriesSize; ++i) {
@@ -26,17 +27,22 @@ QChart* Curve_chart::createChart()
     for(int i = 0; i < seriesSize; ++i) {
         chart->addSeries(splineSeries[i]);
     }
+    chart->legend()->setVisible(false);
 //    chart->legend()->hide();
     chart->createDefaultAxes();
     chart->axisX()->setRange(0, maxX);
-    chart->axisY()->setRange(0, maxY);
+    chart->axisY()->setRange(minY, maxY);
     return chart;
 }
 void Curve_chart::setCharTitle(QString s) {
     chart->setTitle(s);
 }
 
-void Curve_chart::dataReceived(const QList<int> &value) {
+void Curve_chart::setY(float maxY, float minY) {
+    chart->axisY()->setRange(minY, maxY);
+}
+
+void Curve_chart::dataReceived(const QList<float> &value) {
     for(int i = 0; i < value.size(); ++i) {
         splineSeries[i]->append(dataNum, value.at(i));
     }

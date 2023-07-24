@@ -44,254 +44,6 @@ border-image:url(:/new/png/res/12.png);
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QWidget" name="widget_4" native="true">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>450</y>
-         <width>251</width>
-         <height>211</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
-        <item>
-         <widget class="QWidget" name="widget_3" native="true">
-          <layout class="QVBoxLayout" name="verticalLayout">
-           <item>
-            <widget class="QLabel" name="label_11">
-             <property name="styleSheet">
-              <string notr="true">border:3px solid #242424;  
-background-color: rgb(85, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>温度1</string>
-             </property>
-             <property name="margin">
-              <number>2</number>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_13">
-             <property name="styleSheet">
-              <string notr="true">border:3px solid #242424;  
-background-color: rgb(85, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>温度2</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_15">
-             <property name="styleSheet">
-              <string notr="true">border:3px solid #242424;  
-background-color: rgb(85, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>温度3</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <widget class="QFrame" name="frame">
-          <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_2">
-           <item>
-            <widget class="QLabel" name="label_tempuratue1">
-             <property name="styleSheet">
-              <string notr="true">border:3px solid #242424;  
-background-color: rgb(85, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>0</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_tempuratue2">
-             <property name="styleSheet">
-              <string notr="true">border:3px solid #242424;  
-background-color: rgb(85, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>0</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_tempuratue3">
-             <property name="styleSheet">
-              <string notr="true">border:3px solid #242424;  
-background-color: rgb(85, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>0</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="widget_5" native="true">
-       <property name="geometry">
-        <rect>
-         <x>470</x>
-         <y>90</y>
-         <width>931</width>
-         <height>211</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
-       </property>
-       <widget class="QWidget" name="widget" native="true">
-        <property name="geometry">
-         <rect>
-          <x>70</x>
-          <y>60</y>
-          <width>741</width>
-          <height>121</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <item>
-          <widget class="QLabel" name="led_water1">
-           <property name="text">
-            <string>TextLabel</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="led_water2">
-           <property name="text">
-            <string>TextLabel</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="led_water3">
-           <property name="text">
-            <string>TextLabel</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="led_ele1">
-           <property name="text">
-            <string>TextLabel</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="led_ele2">
-           <property name="text">
-            <string>TextLabel</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="widget_2" native="true">
-        <property name="geometry">
-         <rect>
-          <x>120</x>
-          <y>20</y>
-          <width>681</width>
-          <height>42</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLabel" name="label_6">
-           <property name="text">
-            <string>水浸传感器1</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_7">
-           <property name="text">
-            <string>水浸传感器2</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_8">
-           <property name="text">
-            <string>水浸传感器3</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_9">
-           <property name="text">
-            <string>电磁换向阀1</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_10">
-           <property name="text">
-            <string>电磁换向阀2</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </widget>
-      <widget class="QFrame" name="frame_2">
-       <property name="geometry">
-        <rect>
-         <x>300</x>
-         <y>300</y>
-         <width>1181</width>
-         <height>271</height>
-        </rect>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_4">
-        <item>
-         <widget class="Curve_chart" name="curve_chart1" native="true">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(85, 170, 255);</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="Curve_chart" name="curve_chart1_2" native="true">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(85, 170, 255);</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="Curve_chart" name="curve_chart1_3" native="true">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(85, 170, 255);</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
       <widget class="QLabel" name="label_14">
        <property name="geometry">
         <rect>
@@ -322,14 +74,14 @@ color: rgb(255, 0, 127);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="pic.qrc">:/new/png/res/13.png</pixmap>
+        <pixmap>:/new/png/res/13.png</pixmap>
        </property>
       </widget>
       <widget class="QPushButton" name="pushButton">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>190</y>
+         <x>140</x>
+         <y>180</y>
          <width>141</width>
          <height>41</height>
         </rect>
@@ -344,8 +96,8 @@ color: rgb(255, 0, 127);</string>
       <widget class="QWidget" name="widget_6" native="true">
        <property name="geometry">
         <rect>
-         <x>40</x>
-         <y>90</y>
+         <x>1190</x>
+         <y>170</y>
          <width>211</width>
          <height>81</height>
         </rect>
@@ -389,63 +141,11 @@ color: rgb(255, 0, 127);</string>
         <string/>
        </property>
       </widget>
-      <widget class="QFrame" name="frame_3">
-       <property name="geometry">
-        <rect>
-         <x>300</x>
-         <y>570</y>
-         <width>1181</width>
-         <height>271</height>
-        </rect>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_5">
-        <item>
-         <widget class="Curve_chart" name="curve_chart1_4" native="true">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(85, 170, 255);</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="Curve_chart" name="curve_chart1_5" native="true">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(85, 170, 255);</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="Curve_chart" name="curve_chart1_6" native="true">
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(85, 170, 255);</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="widget_7" native="true">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>310</y>
-         <width>271</width>
-         <height>531</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-image: url(:/new/png/res/11.png);</string>
-       </property>
-      </widget>
       <widget class="QComboBox" name="portCombox">
        <property name="geometry">
         <rect>
-         <x>210</x>
-         <y>190</y>
+         <x>310</x>
+         <y>180</y>
          <width>121</width>
          <height>41</height>
         </rect>
@@ -454,8 +154,8 @@ color: rgb(255, 0, 127);</string>
       <widget class="QLabel" name="label_portComBOX">
        <property name="geometry">
         <rect>
-         <x>240</x>
-         <y>150</y>
+         <x>340</x>
+         <y>140</y>
          <width>69</width>
          <height>20</height>
         </rect>
@@ -470,8 +170,8 @@ color: rgb(255, 0, 127);</string>
       <widget class="QPushButton" name="start_recieve_btn">
        <property name="geometry">
         <rect>
-         <x>230</x>
-         <y>240</y>
+         <x>330</x>
+         <y>230</y>
          <width>80</width>
          <height>29</height>
         </rect>
@@ -483,8 +183,8 @@ color: rgb(255, 0, 127);</string>
       <widget class="QLabel" name="baud_label">
        <property name="geometry">
         <rect>
-         <x>390</x>
-         <y>150</y>
+         <x>490</x>
+         <y>140</y>
          <width>51</width>
          <height>20</height>
         </rect>
@@ -499,8 +199,8 @@ color: rgb(255, 0, 127);</string>
       <widget class="QComboBox" name="baud_rate_select">
        <property name="geometry">
         <rect>
-         <x>350</x>
-         <y>190</y>
+         <x>450</x>
+         <y>180</y>
          <width>121</width>
          <height>41</height>
         </rect>
@@ -509,8 +209,8 @@ color: rgb(255, 0, 127);</string>
       <widget class="QPushButton" name="stop_recieve_btn">
        <property name="geometry">
         <rect>
-         <x>370</x>
-         <y>240</y>
+         <x>470</x>
+         <y>230</y>
          <width>80</width>
          <height>29</height>
         </rect>
@@ -518,6 +218,97 @@ color: rgb(255, 0, 127);</string>
        <property name="text">
         <string>停止接收</string>
        </property>
+      </widget>
+      <widget class="Curve_chart" name="curve_chart7" native="true">
+       <property name="geometry">
+        <rect>
+         <x>1170</x>
+         <y>450</y>
+         <width>339</width>
+         <height>251</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(85, 170, 255);</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>270</y>
+         <width>1111</width>
+         <height>631</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QFrame" name="frame_2">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="Curve_chart" name="curve_chart1" native="true">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(85, 170, 255);</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Curve_chart" name="curve_chart2" native="true">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(85, 170, 255);</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Curve_chart" name="curve_chart3" native="true">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(85, 170, 255);</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_3">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="Curve_chart" name="curve_chart4" native="true">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(85, 170, 255);</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Curve_chart" name="curve_chart5" native="true">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(85, 170, 255);</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Curve_chart" name="curve_chart6" native="true">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(85, 170, 255);</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -529,7 +320,7 @@ color: rgb(255, 0, 127);</string>
      <x>0</x>
      <y>0</y>
      <width>1520</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
@@ -543,8 +334,6 @@ color: rgb(255, 0, 127);</string>
    <container>1</container>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="pic.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

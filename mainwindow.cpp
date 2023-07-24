@@ -15,7 +15,27 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->label_zjupic->setScaledContents(true);
 
-    ui->curve_chart1->setCharTitle("三相电压");
+    ui->pushButton->hide();
+    // 标题
+    ui->curve_chart1->setCharTitle("发送电压");
+    ui->curve_chart2->setCharTitle("发送电流");
+    ui->curve_chart3->setCharTitle("发送功率");
+    ui->curve_chart4->setCharTitle("接收电压");
+    ui->curve_chart5->setCharTitle("接收电流");
+    ui->curve_chart6->setCharTitle("接收功率");
+    ui->curve_chart7->setCharTitle("效率");
+    // 图Y轴幅值
+    ui->curve_chart1->setY(150.0, -150.0);
+    ui->curve_chart4->setY(150.0, -150.0);
+
+    ui->curve_chart2->setY(10.0, -10.0);
+    ui->curve_chart5->setY(10.0, -10.0);
+
+    ui->curve_chart3->setY(500.0, -500.0);
+    ui->curve_chart6->setY(500.0, -500.0);
+
+    ui->curve_chart7->setY(1.0, -1.0);
+
     connect(ui->pushButton, &QPushButton::clicked, [=](){
         saveFile = QFileDialog::getOpenFileName(this, tr("selected"), "F:/Data", tr("txt文件(*.txt)"));
     });
@@ -66,6 +86,8 @@ MainWindow::MainWindow(QWidget *parent)
         ui->baud_rate_select->setEnabled(true);
         myPort.close();
     });
+
+    connect(&rectask, &UartRecC::successSignal,this, &MainWindow::display);
 }
 
 MainWindow::~MainWindow()
@@ -99,11 +121,12 @@ void MainWindow::comchange(const QString& selected)
     qDebug()<<selected;
     currentCom = selected;
     ui->curve_chart1->clearAlldate();
-    ui->curve_chart1_2->clearAlldate();
-    ui->curve_chart1_3->clearAlldate();
-    ui->curve_chart1_4->clearAlldate();
-    ui->curve_chart1_5->clearAlldate();
-    ui->curve_chart1_6->clearAlldate();
+    ui->curve_chart2->clearAlldate();
+    ui->curve_chart3->clearAlldate();
+    ui->curve_chart4->clearAlldate();
+    ui->curve_chart5->clearAlldate();
+    ui->curve_chart6->clearAlldate();
+    ui->curve_chart7->clearAlldate();
 }
 
 void MainWindow::baudchange(const QString& selected)
@@ -115,21 +138,26 @@ void MainWindow::baudchange(const QString& selected)
 void MainWindow::readData() {
     //读取串口收到的数据
     QByteArray buffer = myPort.readAll();
-    QString receive = QString(buffer);
-    QStringList  strs=  receive.split(" ");
-    QList<QList<int>> tem;
-    //在接受窗口显示收到的数据
-    for(int i = 1; i < strs.size(); i = i + 3){
-        QList<int> tem1;
-        for(int j = 0; j < 3; ++j){
-            tem1 << strs[i + j].toInt();
-        }
-        tem << tem1;
+    for(int i = 0; i < buffer.size(); ++i) {
+        rectask.last_byte = buffer.at(i);
+        rectask.uart_frame_seg();
     }
-    ui->curve_chart1->dataReceived(tem[0]);
-    ui->curve_chart1_2->dataReceived(tem[1]);
-    ui->curve_chart1_3->dataReceived(tem[2]);
-    ui->curve_chart1_4->dataReceived(tem[3]);
-    ui->curve_chart1_5->dataReceived(tem[4]);
-    ui->curve_chart1_6->dataReceived(tem[5]);
+}
+
+void MainWindow::display(const QList<short>& all_data) {
+    qDebug() << all_data;
+    int n = all_data.size();
+    if(n == 8 && all_data[7] == 0xF1) {
+        QList<float> temp[7];
+        for(int i = 0; i < 7; ++i) {
+            temp[i].append(all_data[i] / 100.0);
+        }
+        ui->curve_chart1->dataReceived(temp[0]);
+        ui->curve_chart2->dataReceived(temp[1]);
+        ui->curve_chart3->dataReceived(temp[2]);
+        ui->curve_chart4->dataReceived(temp[3]);
+        ui->curve_chart5->dataReceived(temp[4]);
+        ui->curve_chart6->dataReceived(temp[5]);
+        ui->curve_chart7->dataReceived(temp[6]);
+    }
 }
